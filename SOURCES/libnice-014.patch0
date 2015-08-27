@@ -1,0 +1,10 @@
+--- agent/conncheck.c-orig	2015-08-27 19:39:00.988068630 +0000
++++ agent/conncheck.c	2015-08-27 19:39:24.601254892 +0000
+@@ -2824,6 +2824,7 @@
+ 
+   if (agent->compatibility == NICE_COMPATIBILITY_GOOGLE ||
+       agent->compatibility == NICE_COMPATIBILITY_MSN ||
++      agent->compatibility == NICE_COMPATIBILITY_RFC5245 ||
+       agent->compatibility == NICE_COMPATIBILITY_OC2007) {
+     /* We need to find which local candidate was used */
+     for (i = component->remote_candidates;

@@ -1,12 +1,13 @@
 Name:           libnice
-Version:        0.1.3
-Release:        4%{?dist}
+Version:        0.1.4
+Release:        1.affectiva%{?dist}
 Summary:        GLib ICE implementation
 
 Group:          System Environment/Libraries
 License:        LGPLv2 and MPLv1.1
 URL:            http://nice.freedesktop.org/wiki/
 Source0:        http://nice.freedesktop.org/releases/%{name}-%{version}.tar.gz
+Patch0:         libnice-014.patch0
 
 BuildRequires:	glib2-devel
 BuildRequires:  gstreamer-devel
@@ -40,6 +41,7 @@ developing applications that use %{name}.
 
 %prep
 %setup -q
+%patch0 -p0
 
 
 %check
@@ -78,6 +80,9 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/nice.pc
 %{_datadir}/gtk-doc/html/%{name}/
+%{_bindir}/sdp-example
+%{_bindir}/simple-example
+%{_bindir}/threaded-example
 
 
 %changelog
