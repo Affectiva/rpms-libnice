@@ -1,6 +1,6 @@
 Name:           libnice
 Version:        0.1.4
-Release:        1.affectiva%{?dist}
+Release:        2.affectiva%{?dist}
 Summary:        GLib ICE implementation
 
 Group:          System Environment/Libraries
